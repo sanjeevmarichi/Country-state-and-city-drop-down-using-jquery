@@ -9,12 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <!-- PAGE TITLE -->
-<title>Dynamic Country State and Cite Drop down llist using jquery and ajax in Html Page.</title>
 
 </head>
 
 <body>
-
+	<h3>Dynamic Dependent Country State and City Dropdown list using jquery and ajax in Html Page.</h3>
 <p>#php and ajax based dropdown list of country, state and city A simple oops based php and ajax country state city dropdown list.</p>
 
 <p><h3>Technology Used:</h3> PHP, Mysql, Jquery</p>
