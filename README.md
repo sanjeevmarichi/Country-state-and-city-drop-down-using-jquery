@@ -11,72 +11,13 @@
 <!-- PAGE TITLE -->
 <title>Dynamic Country State and Cite Drop down llist using jquery and ajax in Html Page.</title>
 
-<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-<!-- MAIN STYLE CSS -->
-
-
-
-<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
- 
-  $('#country').change(function(){ 
-    loadState($(this).find(':selected').val())
-  })
-  $('#state').change(function(){
-    loadCity($(this).find(':selected').val())
-  })
-
-
-});
-
-function loadCountry(){
-        $.ajax({
-            type: "POST",
-            url: "ajax.php",
-            data: "get=country"
-            }).done(function( result ) { 
-                $(result).each(function(){
-                    $("#country").append($(result));
-                })
-            });
-}
-function loadState(countryId){ 
-        $("#state").children().remove()
-        $.ajax({
-            type: "POST",
-            url: "ajax.php",
-            data: "get=state&countryId=" + countryId
-            }).done(function( result ) { 
-                
-                    $("#state").append($(result));
-                
-            });
-}
-function loadCity(stateId){
-        $("#city").children().remove()
-        $.ajax({
-            type: "POST",
-            url: "ajax.php",
-            data: "get=city&stateId=" + stateId
-            }).done(function( result ) {
-                
-                    $("#city").append($(result));
-                
-            });
-}
-
-// init the countries
-loadCountry();
-</script>
-
-
-
 </head>
 
 <body>
 
+<p>#php and ajax based dropdown list of country, state and city A simple oops based php and ajax country state city dropdown list.</p>
 
+<p><h3>Technology Used:</h3> PHP, Mysql, Jquery</p>
 
 <!--Course -->
 <form action="" name="frm" method="post">
